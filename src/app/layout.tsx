@@ -25,7 +25,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased dark",
-          fontSans.variable
+          fontSans.variable,
         )}
       >
         <ProgressBarProviders>

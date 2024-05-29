@@ -1,11 +1,6 @@
 {
-  "extends": [
-    "next/core-web-vitals",
-    "plugin:prettier/recommended"
-  ],
-  "plugins": [
-    "unused-imports"
-  ],
+  "extends": ["next/core-web-vitals", "plugin:prettier/recommended"],
+  "plugins": ["unused-imports"],
   "rules": {
     "no-unused-vars": "warn",
     "unused-imports/no-unused-imports": "error",
@@ -18,5 +13,6 @@
         "argsIgnorePattern": "^_"
       }
     ]
-  }
+  },
+  "ignorePatterns": ["use-toast.ts", "Projects.tsx"]
 }

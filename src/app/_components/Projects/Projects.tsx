@@ -54,46 +54,59 @@ export default function Projects() {
 
   return (
     <div className="flex flex-col gap-4 col-span-2 lg:col-start-2">
-      {myProjects.map(({ title, body, link, secondLink, image, badges }) => (
-        <div className="flex flex-col gap-8 w-full lg:m-12 p-4 border-2 rounded-xl">
-          <div className="flex flex-col gap-2">
-            <div className="text-lg sm:text-xl md:text-2xl lg:text-4xl text-semibold">
-              {title}
-            </div>
+      {myProjects.map(
+        ({ title, body, link, secondLink, image, badges }, index) => (
+          <div
+            key={`${title}-${index}`}
+            className="flex flex-col gap-8 w-full lg:m-12 p-4 border-2 rounded-xl"
+          >
+            <div className="flex flex-col gap-2">
+              <div className="text-lg sm:text-xl md:text-2xl lg:text-4xl text-semibold">
+                {title}
+              </div>
 
-            {link && (
-              <a
-                href={link}
-                className="text-sm sm:text-md md:text-lg lg:text-xl text-thin"
-              >
-                <u>{link}</u>
-              </a>
-            )}
+              {link && (
+                <>
+                  <a
+                    href={link}
+                    className="text-sm sm:text-md md:text-lg lg:text-xl text-thin"
+                  >
+                    <u>{link}</u>
+                  </a>
+                  <br />
+                </>
+              )}
 
-            {secondLink && (
-              <a
-                href={secondLink}
-                className="text-sm sm:text-md md:text-lg lg:text-xl text-thin"
-              >
-                <u>{secondLink}</u>
-              </a>
-            )}
+              {secondLink && (
+                <>
+                  <a
+                    href={secondLink}
+                    className="text-sm sm:text-md md:text-lg lg:text-xl text-thin"
+                  >
+                    <u>{secondLink}</u>
+                  </a>
+                  <br />
+                </>
+              )}
 
-            <img
-              src={image}
-              alt={title}
-              className="w-96 md:w-96 lg:w-96 my-8 object-contain"
-            />
+              <img
+                src={image}
+                alt={title}
+                className="w-96 md:w-96 lg:w-96 my-8 object-contain"
+              />
 
-            <div className="text-sm lg:text-lg mt-4">{body}</div>
-            <div className="flex flex-wrap gap-2 mt-12">
-              {badges.map((badge) => (
-                <Badge className="text-xs md:text-md">{badge}</Badge>
-              ))}
+              <div className="text-sm lg:text-lg mt-4">{body}</div>
+              <div className="flex flex-wrap gap-2 mt-12">
+                {badges.map((badge, index) => (
+                  <Badge key={index} className="text-xs md:text-md">
+                    {badge}
+                  </Badge>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        )
+      )}
     </div>
   );
 }

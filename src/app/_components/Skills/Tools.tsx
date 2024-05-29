@@ -16,8 +16,11 @@ export default function Tools() {
       <div className="text-md">MAIN TOOLS</div>
 
       <div className="flex flex-col items-center gap-2">
-        {myTools.map((tool) => (
-          <div className="w-3/5 lg:w-full text-xl bg-sky-500 text-center px-2 rounded-md">
+        {myTools.map((tool, index) => (
+          <div
+            key={index}
+            className="w-3/5 lg:w-full text-xl bg-sky-500 text-center px-2 rounded-md"
+          >
             {tool}
           </div>
         ))}

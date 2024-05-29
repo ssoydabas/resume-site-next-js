@@ -1,12 +1,6 @@
 "use client";
 import type { ReactNode } from "react";
 
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu";
 import { Card } from "@/components/ui/card";
 import AppLogo from "./AppLogo";
 

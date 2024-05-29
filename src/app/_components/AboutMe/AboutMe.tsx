@@ -10,8 +10,8 @@ export default function AboutMe() {
         While trying to establish an ESL School in my hometown, I was in
         desperate need of a web application that I could promote my school to
         people, however, I have failed to find a developer to build it for me.
-        That's when I decided to learn how to code and build it myself. I have
-        been coding ever since.
+        That&apos;s when I decided to learn how to code and build it myself. I
+        have been coding ever since.
       </p>
       <p className="mb-4">
         My school had a success for several years mostly thanks to the web
